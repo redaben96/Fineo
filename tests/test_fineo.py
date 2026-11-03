@@ -28,7 +28,7 @@ class FineoTests(unittest.TestCase):
             interest_coverage(10, 0)
 
     def test_macro(self):
-        self.assertEqual(period_growth([100, 110, 121]), [None, .1, .1] if False else period_growth([100, 110, 121]))
+        self.assertEqual(period_growth([100, 110, 121])[0], None)
         self.assertAlmostEqual(period_growth([100, 110])[-1], .1)
         self.assertEqual(rebase([20, 30]), [100, 150])
 
